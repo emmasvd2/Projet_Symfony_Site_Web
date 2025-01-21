@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Consoles{% endblock %}
+
+{% block body %}
+<link href="{{ asset('css/console.css') }}" type="text/css" rel="stylesheet">
+<header>
+    <h1 class="titre">Consoles Rétro Gaming</h1>
+</header>
+<div class="conteneur">
+    <div class="ligne">
+        {% for console in consoles %}
+            <div class="image-container">
+                <div class="image">
+                    <a href="{{ path('description', {'id': console.id}) }}">
+                        <img src="{{ asset(console.image) }}" class="console-image" alt="" width="250px" height="200px"/>
+                    </a>
+                </div>
+            </div>
+            {% if loop.index % 4 == 0 %}
+                </div><div class="ligne">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

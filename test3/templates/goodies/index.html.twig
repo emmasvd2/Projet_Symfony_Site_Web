@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Goodies{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/goodies.css') }}" type="text/css">
+{% endblock %}
+
+{% block body %}
+<header>
+    <h1 class="titre">Goodies Rétro Gaming</h1>
+</header>
+<div class="conteneur">
+    <div class="ligne">
+        {% for goodie in goodies|slice(0, 4) %}
+            <div class="image-container">
+                <div class="image">
+                    <a href="{{ path('description', {'id': goodie.id}) }}">
+                        <img src="{{ asset(goodie.image) }}" class="goodie-image" alt="" width="250px" height="200px"/>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="ligne">
+        {% for goodie in goodies|slice(4, 8) %}
+            <div class="image-container">
+                <div class="image">
+                    <a href="{{ path('description', {'id': goodie.id}) }}">
+                        <img src="{{ asset(goodie.image) }}" class="goodie-image" alt="" width="250px" height="200px"/>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+/* Styles pour le formulaire */
+body {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 300px; /* Ajuster la largeur selon vos besoins */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Ajouter de l'espace en dessous */
+}
+
+/* Style pour le bouton */
+.btn {
+    background-color: #7c5b55;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px; /* Ajouter de l'espace en dessous */
+}
+
+.btn:hover {
+    background-color: #008B8B;
+}
+
+/* Style pour le lien "back to list" */
+.back-link {
+    display: block;
+    margin-top: 20px; /* Ajouter de l'espace au-dessus du lien */
+    color: #7c5b55; /* Couleur du texte */
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

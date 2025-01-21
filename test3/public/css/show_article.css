@@ -1,0 +1,46 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center; /* Centrer le texte */
+}
+
+/* Style pour le titre */
+h1 {
+    color: #7c5b55;
+}
+
+/* Style pour le tableau */
+.table {
+    width: 50%; /* Largeur du tableau */
+    margin: 0 auto; /* Centrer le tableau horizontalement */
+    border-collapse: collapse; /* Fusionner les bordures de cellule */
+    background-color: #fff; /* Couleur de fond du tableau */
+    border-radius: 5px; /* Arrondi des coins du tableau */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre du tableau */
+}
+
+/* Style pour les cellules du tableau */
+.table th,
+.table td {
+    padding: 10px; /* Espacement à l'intérieur des cellules */
+    border-bottom: 1px solid #ccc; /* Bordure inférieure des cellules */
+}
+
+/* Style pour les liens */
+a {
+    display: inline-block; /* Pour aligner les liens horizontalement */
+    margin-top: 20px; /* Espacement au-dessus des liens */
+    color: #7c5b55; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprimer le soulignement */
+    padding: 10px 20px; /* Espacement autour des liens */
+    border: 1px solid #7c5b55; /* Bordure des liens */
+    border-radius: 5px; /* Arrondi des coins des liens */
+    transition: background-color 0.3s ease; /* Transition au survol */
+}
+
+a:hover {
+    background-color: #008B8B; /* Couleur de fond au survol */
+    color: #fff; /* Couleur du texte au survol */
+}

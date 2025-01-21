@@ -1,0 +1,35 @@
+{# templates/compte/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Compte{% endblock %}
+
+{% block body %}
+<link href="{{ asset('css/infos_compte.css') }}" type="text/css" rel="stylesheet">
+    <div class="container">
+        <h1>Informations du compte</h1>
+
+        {% if user %}
+            <p class="info">Nom : {{ user.lastName }}</p>
+            <p class="info">Prénom : {{ user.firstName }}</p>
+            <p class="info">Votre adresse email : {{ user.email }}</p>
+            
+            {# Vérifier si l'utilisateur a un ID avant de générer le lien d'édition #}
+            {% if user.id %}
+                <button class="button btn-primary" style="display: block; margin-bottom: 10px;" onclick="window.location='{{ path('app_user_edit', {'id': user.id}) }}'">Éditer mes informations</button>
+            {% endif %}
+        {% else %}
+            <p class="info">Vous devez être connecté pour accéder à cette page.</p>
+        {% endif %}
+        
+        <div class="button-container">
+             <button class="button" style="display: block; margin-bottom: 10px;" type="button" onclick="location.href='{{ path('app_logout') }}'">Déconnexion</button>
+            <button class="button" style="display: block; margin-bottom: 10px;" type="button" onclick="location.href='{{ path('app_home') }}'">Retour à l'accueil</button>
+        </div>
+        <form action="{{ path('app_user_delete', {'id': user.id}) }}" method="post" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ?');">
+            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
+            <button type="submit" class="button btn-danger" style="display: block;">Supprimer mon compte</button>
+        </form>
+
+    </div>
+{% endblock %}

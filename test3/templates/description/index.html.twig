@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Description de l'article{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/description.css') }}" type="text/css" rel="stylesheet">
+    <style>
+        /* Ajoutez des styles pour centrer le texte */
+        body {
+            text-align: center; /* Centre tout le texte dans le corps */
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.description }}</p>
+    <p>Prix: {{ article.price }} €</p> 
+
+    {# Bouton pour éditer l'article si l'utilisateur est connecté en tant qu'administrateur #}
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_admin_article_edit', {'id': article.id}) }}" class="btn btn-primary">Modifier</a>
+    {% endif %}
+
+    {# Afficher le formulaire de suppression si l'utilisateur est connecté et a le rôle admin #}
+    {% if is_granted('ROLE_ADMIN') %}
+        {% include 'article/delete_form.html.twig' %}
+    {% endif %}
+    
+    {# Formulaire pour ajouter au panier #}
+    <form action="{{ path('app_panier_ajouter', {'id': article.id}) }}" method="post">
+        <label for="quantite">Quantité :</label>
+        <input type="number" id="quantite" name="quantite" value="1" min="1" class="quantity-input">
+        <button type="submit" class="add-to-cart-button">Ajouter au panier</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{# templates/article/edit.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('css/edit_article.css') }}" type="text/css">
+    {% endblock %}
+
+{% block title %}Edit Article{% endblock %}
+
+{% block body %}
+    <h1>Edit Article</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit" class="btn btn-primary">Save</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('app_admin_article_index') }}" class="btn btn-secondary">Retour à la liste</a>
+{% endblock %}

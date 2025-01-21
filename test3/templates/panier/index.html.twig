@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Panier{% endblock %}
+
+{% block body %}
+    <h1>Mon Panier</h1>
+    <link rel="stylesheet" href="{{ asset('css/panier.css') }}">
+
+    {% if commandes is not empty %}
+        {% for commande in commandes %}
+            <div class="commande">
+                <h2>Commande n°{{ commande.id }}</h2>
+                <p>Date de commande : {{ commande.dateCommande|date('d/m/Y H:i:s') }}</p>
+                <p>Statut : {{ commande.statut }}</p>
+                <p>Prix Total : {{ commande.prixTotal }} €</p>
+                <form action="{{ path('valider_commande', {'id': commande.id}) }}" method="post" style="display: inline;">
+                    <button type="submit">Valider</button>
+                </form>
+                <form action="{{ path('annuler_commande', {'id': commande.id}) }}" method="post" style="display: inline;">
+                    <button type="submit">Annuler</button>
+                </form>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Votre panier est vide.</p>
+    {% endif %}
+    
+{% endblock %}

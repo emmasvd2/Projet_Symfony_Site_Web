@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Article{% endblock %}
+
+{% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('css/new_article.css') }}" type="text/css">
+    {% endblock %}
+
+{% block body %}
+    <h1>Create new Article</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit" class="btn btn-primary">Create</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('app_admin_article_index') }}" class="btn btn-secondary">Back to list</a>
+{% endblock %}
+

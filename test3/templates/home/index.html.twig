@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ asset('css/home.css') }}" type="text/css" rel="stylesheet">
+    <title>{% block title %}Rétro Buy 2.0{% endblock %}</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+{% block body %}
+<div class="logo-container">
+    <img class="logo" src="images/logo.png" alt="logo site" width="115px" height="115px"/>
+</div>
+<header>
+    <h1 class="titre">Site d'achats Rétro Gaming</h1>
+    <p class="intro">
+        <br>  
+        <br>
+        Bienvenue sur Rétro Buy - L'Oasis du Rétro Gaming!
+        Explorez un monde où chaque pixel raconte une histoire, où chaque console est une passerelle vers l'enfance, et chaque clic sur Rétro Buy ouvre la porte à la nostalgie.
+        Notre Collection Soigneusement Sélectionnée : Des jeux restaurés, des consoles légendaires, et des goodies rétro uniques - découvrez des trésors qui captivent les cœurs depuis des décennies.
+        Livraison Rapide, Satisfaction Assurée : Votre passion, notre priorité. Avec Rétro Buy, plongez dans l'aventure sans attendre. Livraison rapide, sourires assurés.
+        Communauté Rétro Unie : Rejoignez une communauté vibrante de passionnés. Partagez vos souvenirs, découvrez des pépites, et créez ensemble une expérience de jeu inoubliable.
+        Explorez, Achetez - Rétro Buy, Votre Destination Rétro Gaming Incontournable! 🚀🎮 
+    </p>
+</header>
+<nav>
+    <!--Création du menu de la page d'accueil-->
+    <ul>
+        <li>
+            <a href="{{ path('app_jeux') }}">Jeux vidéos</a>
+        </li>
+        <li>
+            <a href="{{ path('app_consoles') }}">Consoles</a>
+        </li>
+        <li>
+            <a href="{{ path('app_goodies') }}">Goodies</a>
+        </li>
+        <li>
+            <a href="{{ path('app_compte') }}">Mon compte</a>
+        </li>
+        <li>
+            <a href="{{ path('panier_index') }}">Panier</a>
+        </li>
+    </ul>
+</nav>
+<div class="conteneur">
+    <div class="ligne">
+        {% for promotion in promotions %}
+            {% if loop.index <= 4 %}
+                <div class="image-container">
+                    <div class="photo">
+                        <a href="{{ path('description', {'id': promotion.id}) }}">
+                            <img src="{{ asset(promotion.image) }}" width="170px" height="190px"/>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="ligne">
+        {% for promotion in promotions %}
+            {% if loop.index > 4 %}
+                <div class="image-container">
+                    <div class="photo">
+                        <a href="{{ path('description', {'id': promotion.id}) }}">
+                            <img src="{{ asset(promotion.image) }}" width="170px" height="190px"/>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

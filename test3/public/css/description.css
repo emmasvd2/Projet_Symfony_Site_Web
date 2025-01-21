@@ -1,0 +1,69 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center; /* Centrer le texte */
+}
+
+/* Style pour le titre */
+h1 {
+    color: #7c5b55;
+}
+
+/* Style pour le paragraphe de description */
+p {
+    color: #333; /* Couleur du texte */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+/* Style pour le prix */
+p.price {
+    color: #007bff; /* Couleur du prix */
+    font-size: 1.2em; /* Taille de police du prix */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+/* Style pour les boutons */
+.btn {
+    display: inline-block; /* Affichage en ligne */
+    padding: 10px 20px; /* Espacement autour du texte */
+    background-color: #7c5b55; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Supprimer le soulignement du texte */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition au survol */
+}
+
+.btn:hover {
+    background-color: #008B8B; /* Couleur de fond au survol */
+}
+
+/* Style pour le formulaire d'ajout au panier */
+form {
+    margin-top: 20px; /* Espacement au-dessus du formulaire */
+}
+
+label {
+    font-weight: bold; /* Texte en gras */
+}
+
+.quantity-input {
+    width: 50px; /* Largeur de l'input de quantité */
+    margin-right: 10px; /* Espacement à droite */
+}
+
+.add-to-cart-button {
+    padding: 10px 20px; /* Espacement autour du texte */
+    background-color: #7c5b55; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background-color 0.3s ease; /* Transition au survol */
+}
+
+.add-to-cart-button:hover {
+    background-color: #008B8B; /* Couleur de fond au survol */
+}

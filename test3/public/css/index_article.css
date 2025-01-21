@@ -1,0 +1,44 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center; /* Centrer le texte */
+}
+
+/* Style pour le tableau */
+.table {
+    width: 80%; /* Largeur du tableau */
+    margin: 0 auto; /* Centrer le tableau horizontalement */
+    border-collapse: collapse; /* Fusionner les bordures de cellule */
+    background-color: #fff; /* Couleur de fond du tableau */
+    border-radius: 5px; /* Arrondi des coins du tableau */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre du tableau */
+}
+
+.table th,
+.table td {
+    padding: 10px; /* Espacement à l'intérieur des cellules */
+    border-bottom: 1px solid #ccc; /* Bordure inférieure des cellules */
+    border-right: 1px solid #ccc; /* Bordure à droite des cellules */
+}
+
+.table th:last-child,
+.table td:last-child {
+    border-right: none; /* Supprimer la bordure à droite de la dernière colonne */
+}
+
+/* Style pour les liens dans le tableau */
+.table a {
+    color: #007bff; /* Couleur des liens */
+    text-decoration: none; /* Supprimer le soulignement */
+    margin-right: 10px; /* Espacement entre les liens */
+}
+
+/* Style pour le lien "Créer un nouvel article" */
+.new-article-link {
+    display: block; /* Affichage en bloc pour occuper toute la largeur */
+    margin-top: 20px; /* Espacement au-dessus du lien */
+    color: #007bff; /* Couleur du lien */
+    text-decoration: none; /* Supprimer le soulignement */
+}

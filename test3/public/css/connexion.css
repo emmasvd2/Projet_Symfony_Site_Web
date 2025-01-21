@@ -1,0 +1,100 @@
+/* Fichier infos_compte1.css */
+
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Conteneur principal */
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style pour le titre h1 */
+.container h1 {
+    color: #7c5b55;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Style pour la zone de contenu du formulaire */
+.container > form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    border: 1px solid #ccc;
+}
+
+/* Style pour les libellés */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Style pour les champs de saisie */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+/* Style pour les boutons */
+button {
+    background-color: #7c5b55;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style au survol des boutons */
+button:hover {
+    background-color: #7c5b55;
+}
+
+/* Style pour les paragraphes */
+div p {
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Style pour les liens */
+div a {
+    color: #7c5b55;
+    text-decoration: none;
+}
+
+/* Style pour le lien "Accueil" */
+.lien-accueil {
+    color: #7c5b55;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Style au survol du lien "Accueil" */
+.lien-accueil:hover {
+    text-decoration: underline;
+    color: #7c5b55;
+}
+
+/* Position de l'image */
+.image {
+    position: fixed;
+    top: 0px;
+    right: 1130px;
+}

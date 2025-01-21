@@ -1,0 +1,53 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center; /* Centrer le texte */
+}
+
+/* Styles pour le formulaire */
+form {
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+    max-width: 600px; /* Largeur maximale du formulaire */
+    background-color: #fff; /* Couleur de fond du formulaire */
+    padding: 20px; /* Espacement à l'intérieur du formulaire */
+    border-radius: 5px; /* Arrondi des coins du formulaire */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre du formulaire */
+}
+
+/* Styles pour les champs de formulaire */
+input[type="text"],
+textarea {
+    width: 90%; /* Largeur des champs */
+    padding: 15px; /* Espacement à l'intérieur des champs */
+    margin-bottom: 15px; /* Espacement entre les champs */
+    border: 1px solid #ccc; /* Bordure des champs */
+    border-radius: 5px; /* Arrondi des coins des champs */
+}
+
+/* Styles pour les boutons */
+.btn {
+    background-color: #7c5b55; /* Couleur de fond des boutons */
+    color: #fff; /* Couleur du texte des boutons */
+    padding: 10px 20px; /* Espacement autour des boutons */
+    border: none; /* Supprimer la bordure des boutons */
+    border-radius: 5px; /* Arrondi des coins des boutons */
+    cursor: pointer; /* Curseur de type pointer au survol */
+    transition: background-color 0.3s ease; /* Transition au survol */
+    margin-right: 10px; /* Espacement entre les boutons */
+}
+
+.btn:hover {
+    background-color: #008B8B; /* Couleur de fond des boutons au survol */
+}
+
+/* Style pour le lien "Retour à la liste" */
+.back-link {
+    color: #7c5b55; /* Couleur du texte du lien */
+    text-decoration: none; /* Supprimer le soulignement */
+}
+
+.back-link:hover {
+    text-decoration: underline; /* Soulignement du lien au survol */
+}

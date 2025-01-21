@@ -1,0 +1,55 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center; /* Centrer le texte */
+}
+
+/* Style pour le titre */
+h1 {
+    color: #7c5b55;
+}
+
+/* Style pour le formulaire */
+form {
+    width: 50%; /* Largeur du formulaire */
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+    background-color: #fff; /* Couleur de fond du formulaire */
+    border-radius: 5px; /* Arrondi des coins du formulaire */
+    padding: 20px; /* Espacement à l'intérieur du formulaire */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre du formulaire */
+}
+
+/* Style pour les champs du formulaire */
+form input[type="text"],
+form textarea {
+    width: 100%; /* Largeur des champs */
+    margin-bottom: 10px; /* Espacement entre les champs */
+    padding: 10px; /* Espacement à l'intérieur des champs */
+    border: 1px solid #ccc; /* Bordure des champs */
+    border-radius: 5px; /* Arrondi des coins des champs */
+}
+
+/* Style pour le bouton "Create" */
+form button {
+    padding: 10px 20px; /* Espacement autour du bouton */
+    border: none; /* Supprimer la bordure du bouton */
+    border-radius: 5px; /* Arrondi des coins du bouton */
+    background-color: #7c5b55; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    cursor: pointer; /* Curseur pointeur au survol */
+    transition: background-color 0.3s ease; /* Transition au survol */
+}
+
+form button:hover {
+    background-color: #7c5b55; /* Couleur de fond du bouton au survol */
+}
+
+/* Style pour le lien "Back to list" */
+.back-link {
+    display: block; /* Affichage en bloc pour occuper toute la largeur */
+    margin-top: 20px; /* Espacement au-dessus du lien */
+    color: #7c5b55; /* Couleur du lien */
+    text-decoration: none; /* Supprimer le soulignement */
+}

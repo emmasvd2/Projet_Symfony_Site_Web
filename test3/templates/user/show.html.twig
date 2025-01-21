@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="{{ asset('css/show_user.css') }}" type="text/css">
+    {% endblock %}
+
+{% block body %}
+    <h1>User</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ user.password }}</td>
+            </tr>
+            <tr>
+                <th>IsVerified</th>
+                <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>FirstName</th>
+                <td>{{ user.firstName }}</td>
+            </tr>
+            <tr>
+                <th>LastName</th>
+                <td>{{ user.lastName }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="button-container">
+        <a href="{{ path('app_user_index') }}" class="link">back to list</a>
+    </div>
+    <div class="button-container">
+        <a href="{{ path('app_user_edit', {'id': user.id}) }}" class="link">edit</a>
+    </div>
+    <div class="button-container">
+        {{ include('user/_delete_form.html.twig', {'button_class': 'link'}) }}
+    </div>
+{% endblock %}
