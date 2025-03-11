@@ -1,9 +1,9 @@
 # Retro Buy 2.0 - Site e-commerce en Symfony
 
 ## Description du Projet
-Retro Buy 2.0 est un site e-commerce développé avec le framework **Symfony** permettant d'acheter des consoles, jeux et goodies sur le thème du rétro-gaming. Ce projet a été réalisé dans le cadre d'un cours de développement web avec Symfony.\
+Retro Buy 2.0 est un site e-commerce développé avec le framework **Symfony** permettant d'acheter des consoles, jeux et goodies sur le thème du rétro-gaming. Ce projet a été réalisé dans le cadre d'un cours de développement web avec Symfony.
 
-Le site permet la gestion des utilisateurs avec plusieurs rôles (administrateur et client), un système d'achat avec panier et validation de commande, ainsi qu'un espace administrateur pour gérer les articles et les utilisateurs.\
+Le site permet la gestion des utilisateurs avec plusieurs rôles (administrateur et client), un système d'achat avec panier et validation de commande, ainsi qu'un espace administrateur pour gérer les articles et les utilisateurs.
 
 ## Objectifs
 - **Découvrir et utiliser Symfony** pour structurer un projet web.
@@ -32,28 +32,41 @@ Le site permet la gestion des utilisateurs avec plusieurs rôles (administrateur
 - Gestion des comptes utilisateurs (voir, modifier, supprimer).
 
 ## Structure du Projet
-- src : Code source du projet Symfony
-- templates : Fichiers Twig pour l'affichage |-- public/ # Ressources publiques (CSS, JS, images) |-- migrations/ # Scripts de migration pour la BDD |-- config/ # Configuration du projet |-- var/ # Cache et logs |-- README.md # Documentation du projet |-- composer.json # Dépendances Symfony
-- - .env # Configuration de la base de données
+- test3
+    - src : Code source du projet Symfony
+        - Controller : Contrôleurs Symfony
+        - Entity :  Entités Doctrine
+        - Form :  Formulaires Symfony
+        - Repository/     # Requêtes vers la base de données
+        - Security/       # Gestion de l'authentification et  des rôles
+        - Kernel.php      # Configuration du noyau Symfony
+    - templates/          # Fichiers Twig pour l'affichage
+    - public/             # Ressources publiques (CSS, JS, images)
+    - migrations/         # Scripts de migration pour la BDD
+    - config/             # Configuration du projet
+    - var/                # Cache et logs
+- README.md           # Documentation du projet
+    - composer.json       # Dépendances Symfony
+    - env                # Configuration de la base de données
+  
 ## Installation et Configuration
-### 1️⃣ **Cloner le projet**
+1️. **Cloner le projet**
 ```bash
 git clone https://github.com/emmasvd2/retro-buy-2.0.git
 cd retro-buy-2.0
 ````
-2️⃣ **Installer les dépendances**
+2. **Installer les dépendances**
 ```bash
 composer install
 npm install
 ```
 
-3️⃣ **Configurer la base de données**
+3️. **Configurer la base de données**
 Modifier le fichier .env avec les paramètres de connexion à votre base de données :
 
-ini
-
+```ini
 DATABASE_URL="mysql://user:password@127.0.0.1:3306/retro_buy"
-
+```
 Créer la base de données et appliquer les migrations :
 
 ```bash
@@ -61,7 +74,7 @@ php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
 ```
 
-4️⃣ **Démarrer le serveur Symfony**
+4️. **Démarrer le serveur Symfony**
 
 ```bash
 symfony server:start
@@ -72,7 +85,7 @@ Ou avec PHP : \
 ```bash
 php -S 127.0.0.1:8000 -t public
 ```
-Le site est maintenant accessible sur http://127.0.0.1:8000/. \
+Le site est maintenant accessible sur http://127.0.0.1:8000/. 
 
 **Comptes de test**
 - Client :
