@@ -37,17 +37,17 @@ Le site permet la gestion des utilisateurs avec plusieurs rôles (administrateur
         - Controller : Contrôleurs Symfony
         - Entity :  Entités Doctrine
         - Form :  Formulaires Symfony
-        - Repository/     # Requêtes vers la base de données
-        - Security/       # Gestion de l'authentification et  des rôles
-        - Kernel.php      # Configuration du noyau Symfony
-    - templates/          # Fichiers Twig pour l'affichage
-    - public/             # Ressources publiques (CSS, JS, images)
-    - migrations/         # Scripts de migration pour la BDD
-    - config/             # Configuration du projet
-    - var/                # Cache et logs
-- README.md           # Documentation du projet
-    - composer.json       # Dépendances Symfony
-    - env                # Configuration de la base de données
+        - Repository : Requêtes vers la base de données
+        - Security   : Gestion de l'authentification et  des rôles
+        - Kernel.php : Configuration du noyau Symfony
+    - templates :  Fichiers Twig pour l'affichage
+    - public :  Ressources publiques (CSS, JS, images)
+    - migrations :  Scripts de migration pour la BDD
+    - config     : Configuration du projet
+    - var        : Cache et logs
+- README.md      : Documentation du projet
+    - composer.json  : Dépendances Symfony
+    - env            : Configuration de la base de données
   
 ## Installation et Configuration
 1️. **Cloner le projet**
@@ -80,7 +80,7 @@ php bin/console doctrine:migrations:migrate
 symfony server:start
 ```
 
-Ou avec PHP : \
+Ou avec PHP : 
 
 ```bash
 php -S 127.0.0.1:8000 -t public
@@ -96,5 +96,5 @@ Le site est maintenant accessible sur http://127.0.0.1:8000/.
     - Email : test@test.com
     - Mot de passe : test0000
 
-**Auteurs**
+**Auteur**
 - Emma Stievenard
